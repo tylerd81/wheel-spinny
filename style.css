@@ -7,15 +7,12 @@
     /* height: 700px; */
     height: 100vh;
     margin: 0 auto;
-    border: dashed 1px #F00;   
-    
 }
 
 #spinner {
     width: var(--spinner-diameter);
     height: var(--spinner-diameter);
-    border-radius: 50%;    
-    background-color: #e1f012;
+    border-radius: 50%;        
     text-align: center;
     box-shadow: 0 0 15px #000;
     background-image: url('spinner.png');
@@ -41,52 +38,10 @@
     text-align: center;
 }
 
-.spinner-item {
-    position: absolute;
-    margin-left: 50%;
-    margin-top: 50%;
-    color: white;
-}
-
 .spin-button {
     background-color: #00F;
     border: solid 1px #000;
     color: white;
     font-size: 2rem;
     padding: 1rem;
-}
-
-
-
-#item-one {
-    transform: rotate(45deg) translateY(-200px);
-}
-
-#item-two {
-    transform: translateX(200px);
-}
-
-#item-three {
-    transform: rotate(135deg) translateY(-190px) ;
-}
-
-#item-four {
-    transform: rotate(180deg) translate(40px,-210px) ;
-}
-
-#item-five {
-    transform: rotate(225deg) translate(30px,-250px) ;
-}
-
-#item-six {
-    transform: translateX(-230px) ;
-}
-
-#item-seven {
-    transform: rotate(-45deg) translateY(-250px);
-}
-
-#item-eight {
-    transform: translate(-30px, -230px);
-
 }
