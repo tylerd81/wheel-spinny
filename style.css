@@ -1,5 +1,5 @@
 :root {
-    --spinner-diameter: 500px;
+    --spinner-diameter: 520px;
 }
 
 #spinner-container {
@@ -13,14 +13,13 @@
 #spinner {
     width: var(--spinner-diameter);
     height: var(--spinner-diameter);
-    border-radius: 50%;
-    border: solid 5px #000;
-    background-color: #6b7b99;
+    border-radius: 50%;    
+    background-color: #e1f012;
     text-align: center;
     box-shadow: 0 0 15px #000;
-    /* background-image: url('pacman.png');
-    background-size: contain;
-    background-color: black; */
+    background-image: url('spinner.png');
+    background-position: center;
+    background-color: black; 
 
     position: relative;
 }
