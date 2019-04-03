@@ -1,15 +1,47 @@
 :root {
     --spinner-diameter: 520px;
 }
+body {
+    background-color: #cbcecf;    
+    font-family: 'Roboto';
+}
+
+#main-container {
+    width: 70vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    
+    grid-column-gap: 10px;
+    grid-row-gap: 2rem;
+
+}
 
 #spinner-container {
-    width: 700px;
-    /* height: 700px; */
-    height: 100vh;
-    margin: 0 auto;
+    /* width: 700px;        */
+    /* margin: 0 auto; */
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+}
+
+#winner-container {
+    
+    height: 2rem;
+    /* margin-bottom: 1rem; */
+    border: solid 3px #000;
+    
+    background-color: white;
+    border-radius: 10px;
+    padding: .5rem .5rem;
+}
+
+#winner-container h1 {
+    margin: 0;
 }
 
 #spinner {
+    
     width: var(--spinner-diameter);
     height: var(--spinner-diameter);
     border-radius: 50%;        
@@ -18,7 +50,7 @@
     background-image: url('spinner.png');
     background-position: center;
     background-color: black; 
-    margin: 0 auto;
+    margin: 1rem auto;
     position: relative;
 }
 
@@ -26,8 +58,9 @@
     font-size: 2rem;
     color: white;
     /* margin-left: 35%; */
-    position: absolute;
-    left: 49%;    
+    position: relative;
+    left: 48%;  
+    top: 60px; 
     width: 30px;
     height: 40px;
     z-index: 10;
@@ -38,10 +71,61 @@
     text-align: center;
 }
 
-.spin-button {
-    background-color: #00F;
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     border: solid 1px #000;
-    color: white;
-    font-size: 2rem;
+    height: 100%;
     padding: 1rem;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#about p {
+    font-size: 1.2rem;
+}
+
+#button-container {
+    height: 3.0rem;
+    
+    
+}
+
+.spin-button {
+    background-color: #c42a89;
+    border: solid 2px #000;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.5rem;
+    padding: .5rem;    
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 700px) {
+    #main-container {
+        display: block;
+        width: 100%;        
+    }
+    #winner-container {
+        /* width: 90%; */
+        margin: 1rem auto;        
+    }
+
+    #button-container {
+        /* width: 90%; */
+        margin: 0 auto;               
+        
+    }
+
+    .spin-button {
+        display: block;
+    }
+    
+
+    #marker {
+        left: 47%;
+        display: block;
+    }
 }

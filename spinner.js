@@ -60,6 +60,7 @@ function spin() {
         return; // only spin once
     } else {
         isSpinning = true;
+        setWinner('');
     }
 
     power = Math.floor(Math.random() * max);
@@ -70,7 +71,6 @@ function spin() {
     }
 
     let timerId = setInterval(() => {
-        // displayPower();
         currentPos += power;
         if(currentPos > 360) {
             currentPos -= 360;
@@ -85,12 +85,13 @@ function spin() {
             isSpinning = false;
             
             let winner = findClosestItem(currentPos);
-            document.getElementById("winner").innerText = winner.language;
+            setWinner(`Winner is ${winner.language}!`)
+            // document.getElementById("winner").innerText = `Winner is ${winner.language}!`;
         }
     }, updateInterval);
 }
 
-function displayPower() {
-    document.getElementById("power").innerText = "Power: " + power;
-    document.getElementById("pos").innerText = "Position: " + currentPos;
-}
+function setWinner(winnerText) {
+    document.getElementById("winner").innerText = winnerText;
+} 
+
