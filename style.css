@@ -7,6 +7,7 @@
     /* height: 700px; */
     height: 100vh;
     margin: 0 auto;
+    border: dashed 1px #F00;   
     
 }
 
@@ -20,16 +21,24 @@
     background-image: url('spinner.png');
     background-position: center;
     background-color: black; 
-
+    margin: 0 auto;
     position: relative;
 }
 
 #marker {
     font-size: 2rem;
-    color: #00F;
-    margin-left: 35%;
+    color: white;
+    /* margin-left: 35%; */
+    position: absolute;
+    left: 49%;    
     width: 30px;
     height: 40px;
+    z-index: 10;
+    box-shadow: 2px 2px 2px #333;
+    border-bottom: solid 1px #000;
+    border-radius: 5px;
+    background-color: #000;
+    text-align: center;
 }
 
 .spinner-item {

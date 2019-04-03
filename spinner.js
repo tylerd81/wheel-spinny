@@ -10,14 +10,14 @@ let isSpinning = false;
 document.getElementById("spin-button").addEventListener("click", () => spin());
 
 let items = [
-    {language: "C", position: 0},
-    {language: "Go", position: 45},
-    {language: "JavaScript", position: 90},
-    {language: "PHP", position: 135},
-    {language: "C++", position: 180},
-    {language: "Java", position: 225},
-    {language: "Python", position: 270},
-    {language: "C#", position: 315},
+    {language: "C", position: 338},
+    {language: "Go", position: 22},
+    {language: "JavaScript", position: 67},
+    {language: "PHP", position: 112},
+    {language: "C++", position: 157},
+    {language: "Java", position: 203},
+    {language: "Python", position: 247},
+    {language: "C#", position: 290},
 ];
 
 function findClosestItem(position) {
