@@ -26,27 +26,33 @@
 
       <div id="spinner-container">
         <div id="spinner"></div>
+        <div id="winner">
+            <h2 id="winner-text">JavaScript</h2>
+          </div>
       </div>
 
       <div id="about">
-        <h2>About</h2>
-        <p>
-          This is just a silly app written for fun. It is not meant to actually
-          decide a language for you. Each programming language has its own
-          strengths and weaknesses and you should probably just use the language
-          you enjoy most or the one that is best for the job!
-        </p>
-
-        <h2>The Code</h2>
-        <p>
-          This app was created with just plain old JavaScript, html, CSS, and
-          Gimp. You can view the
-          <a target="_blank" href="https://github.com/tylerd81/wheel-spinny"
-            >code repository here</a
-          >.
-        </p>
-        <button type="button" id="about-ok-button">Ok</button>
+        <h2 class="about-header">About</h2>
+        <div id="about-content">
+          <p>
+            This is just a silly app written for fun. It is not meant to actually
+            decide a language for you. Each programming language has its own
+            strengths and weaknesses and you should probably just use the language
+            you enjoy most or the one that is best for the job!
+          </p>
+         
+          <p>
+            This app was created with just plain old JavaScript, html, CSS, and
+            Gimp. You can view the
+            <a target="_blank" href="https://github.com/tylerd81/wheel-spinny"
+              >code repository here</a
+            >.
+          </p>
+          <button type="button" id="about-ok-button">Ok</button>
+        </div>
       </div>
+
+      
     </div>
     <script src="spinner.js"></script>
   </body>

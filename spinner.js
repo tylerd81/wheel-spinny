@@ -74,6 +74,19 @@ function findClosestItem(position) {
   return items[currentWinner];
 }
 
+function showWinner(winner) {
+  let winnerDiv = document.getElementById("winner");
+  let winnerText = document.getElementById("winner-text");
+
+  winnerText.innerText = winner;
+
+  winnerDiv.style.transform = "scale(1.0, 1.0) rotate(360deg)";
+
+  setTimeout(() => {
+    winnerDiv.style.transform = "scale(0,0)";
+  }, 2000);
+
+}
 function spin() {
   if (isSpinning) {
     return; // only spin once
@@ -102,6 +115,7 @@ function spin() {
       isSpinning = false;
 
       let winner = findClosestItem(currentPos);
+      showWinner(winner.language);
     }
   }, updateInterval);
 }
