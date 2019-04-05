@@ -5,7 +5,7 @@
 
 body {
   background-color: #222;
-  font-family: "Roboto";
+  font-family: 'Baloo Chettan';
   color: #222;
   background-image: url("images/body-bg.png");
 }
@@ -130,7 +130,8 @@ a:visited {
   font-size: 1.5rem;
   padding: 0.5rem;
   width: 100%;
-  outline: none;
+	outline: none;
+	font-family: 'Baloo Chettan';
 }
 
 #winner {
@@ -150,8 +151,10 @@ a:visited {
 #winner:hover {
 	transform: scale(1,1) rotate(360deg);
 }
+
 #winner h2 {
-	margin-top: 45%;
+	font-size: 2rem;
+	margin-top: 36%;
 	color: #3d57e9;
 }
 
