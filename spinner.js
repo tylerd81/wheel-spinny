@@ -16,7 +16,9 @@ document.getElementById("spin-button").addEventListener("click", () => spin());
 // show about button handler
 document.getElementById("about-show-button").addEventListener("click", () => {
   if (!aboutShown) {
-    document.getElementById("about").style.opacity = "1";
+    let aboutBox = document.getElementById("about");
+
+    aboutBox.style.left = "40%";
     aboutShown = true;
   }
 });
@@ -24,66 +26,21 @@ document.getElementById("about-show-button").addEventListener("click", () => {
 // about Ok button handler
 document.getElementById("about-ok-button").addEventListener("click", () => {
   if (aboutShown) {
-    document.getElementById("about").style.opacity = "0";
+    let aboutBox = document.getElementById("about");
+    aboutBox.style.left = "-40%";
     aboutShown = false;
   }
 });
 
 let items = [
-  {
-    language: "C",
-    position: 338,
-    about: "C is a low level language. It has been around for a long time and has many uses - it is used for developing the Linux kernal.",
-    link: "https://en.wikipedia.org/wiki/C_(programming_language)"
-  },
-  {
-    language: "Go",
-    position: 22,
-    about:
-      "Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.",
-    link: "https://golang.org/"
-  },
-  {
-    language: "JavaScript",
-    position: 67,
-    about:
-      "JavaScript is a very popular programming language used for creating websites (like this one!). It can also be used for server side development with Node.js",
-    link: "https://en.wikipedia.org/wiki/JavaScript"
-  },
-  {
-    language: "PHP",
-    position: 112,
-    about:
-      "PHP is a web development language that powers some pretty big projects such as Wordpress.",
-    link: "https://www.php.net/"
-  },
-  {
-    language: "C++",
-    position: 157,
-    about: "C++ is a general purpose OOP/imperative language.",
-    link: "https://en.wikipedia.org/wiki/C%2B%2B"
-  },
-  {
-    language: "Java",
-    position: 203,
-    about:
-      "Java is a general purpose OOP language that is compiled to bytecode and then run on the Java Virtual Machine",
-    link: "https://en.wikipedia.org/wiki/Java_(programming_language)"
-  },
-  {
-    language: "Python",
-    position: 247,
-    about:
-      "Python is an interpreted, high-level, general-purpose programming language.",
-    link: "https://www.python.org/"
-  },
-  {
-    language: "C#",
-    position: 290,
-    about:
-      "C# is a general-purpose, multi-paradigm programming language. Similar to Java, it is compiled to bytecode and then runs on a virtual machine.",
-    link: "https://docs.microsoft.com/en-us/dotnet/csharp/"
-  }
+  { language: "C", position: 338 },
+  { language: "Go", position: 22 },
+  { language: "JavaScript", position: 67 },
+  { language: "PHP", position: 112 },
+  { language: "C++", position: 157 },
+  { language: "Java", position: 203 },
+  { language: "Python", position: 247 },
+  { language: "C#", position: 290 }
 ];
 
 function findClosestItem(position) {
@@ -122,7 +79,6 @@ function spin() {
     return; // only spin once
   } else {
     isSpinning = true;
-    reset();
   }
 
   power = Math.floor(Math.random() * max);
@@ -146,36 +102,8 @@ function spin() {
       isSpinning = false;
 
       let winner = findClosestItem(currentPos);
-      setWinner(winner.language);
-      setHelpfulInfo(winner.about);
-      setLink(winner.link);
     }
   }, updateInterval);
 }
 
-function reset() {
-  setWinner("");
-  setHelpfulInfo("");
-  setLink("", "");
-}
 
-function setHelpfulInfo(text) {
-  document.getElementById("helpful-info").innerText = text;
-}
-
-function setLink(link, text) {
-  let a = document.getElementById("language-link");
-
-  if (link === "" && text === "") {
-    a.style.display = "none";
-    return;
-  } else {
-    a.style.display = "inline";
-  }
-  a.setAttribute("href", link);
-  a.innerText = text || "Learn more here";
-}
-
-function setWinner(winnerText) {
-  document.getElementById("winner").innerText = winnerText;
-}

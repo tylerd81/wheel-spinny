@@ -1,218 +1,181 @@
 :root {
-    --spinner-diameter: 520px;
-    --spinner-diameter-small: 300px;
+  --spinner-diameter: 520px;
+  --spinner-diameter-small: 300px;
 }
 
 body {
-    background-color: #e4e4e4;    
-    font-family: 'Roboto';
-    color: #222;
+  background-color: #222;
+  font-family: "Roboto";
+  color: #222;
+  background-image: url("images/body-bg.png");
 }
 
 a {
-    text-decoration: none;
-    color: #2a41c4;
+  text-decoration: none;
+  color: #2a41c4;
 }
 
 a:visited {
-    color: #2a41c4;
+  color: #2a41c4;
 }
 
 #main-container {
-    width: 50vw;    
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-column-gap: 10px;
-    grid-row-gap: 1rem;
-
-}
-
-#about {
-    border: solid 3px #000;
-    background-color: white;
-    font-size: 1.2rem;
-    position: absolute;
-    top: 30%;
-    left: 40%;
-    width: 20rem;
-    border-radius: 5px;
-    padding: 1rem;
-    z-index: 5;
-    box-shadow: 5px 5px 5px #222;
-    opacity: 0;
-    transition: opacity 300ms ease-out;
-}
-
-#about h2 {
-    margin: 0;
-}
-
-#about-ok-button {
-    background-color: #c42a89;
-    border: solid 3px #000;
-    border-radius: 5px;
-    color: white;
-    font-size: 1.5rem;
-    padding: .5rem;    
-    width: 100%;
-    height: 100%;
-    outline: none;    
-}
-
-#about-ok-button:active {
-    background-color: #000;;
+  width: 50vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 1rem;
 }
 
 #logo {
-    grid-column: 1/3;    
-    text-align: center;
+  color: white;
+  text-align: center;
 }
 
-#logo h1 {
-    display: inline-block;
-    margin-right: 1rem;
+#about {
+  border: solid 3px #000;
+  background-color: white;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 30%;
+  left: -40%;
+  width: 20rem;
+  border-radius: 5px;
+  padding: 1rem;
+  z-index: 5;
+  box-shadow: 5px 5px 5px #222;
+  transition: left 300ms ease-out;
 }
+
+#about h2 {
+  margin: 0;
+}
+
+#about-ok-button {
+  background-color: #c42a89;
+  border: solid 3px #000;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  width: 100%;
+  height: 100%;
+  outline: none;
+}
+
+#about-ok-button:active {
+  background-color: #000;
+}
+
 #about-show-button {
-    background-color: #2a41c4;
-    border: solid 3px #000;
-    border-radius: 5px;
-    color: white;    
-    padding: .5rem;        
-    outline: none;    
+  background-color: #2a41c4;
+  border: solid 3px #000;
+  border-radius: 5px;
+  color: white;
+  outline: none;
+  font-size: 1.5rem;
+  padding: 0.5rem;
 }
 
 #about-show-button:active {
-    background-color: #000;
+  background-color: #000;
 }
 
-#spinner-container {    
-    padding: 40px 20px 0 20px;
-    width: 520px;
-    height: 520px;
-    overflow: hidden;
-    background-image: url('images/spinner-bg.png');
-    background-position: center;
+#spinner-container {
+  padding: 40px 20px 0 20px;
+  width: 520px;
+  height: 520px;
+  overflow: hidden;
+  background-image: url("images/spinner-bg-legs.png");
+  background-position: center;
+  grid-column: 1/3;
+  margin: 0 auto;
 }
 
-
-#winner-container {
-    text-align: center;
-    height: 2rem;
-    border: solid 3px #000;
-    background-color: white;
-    border-radius: 10px;
-    padding: .5rem .5rem;
+#spinner {
+  width: var(--spinner-diameter);
+  height: var(--spinner-diameter);
+  border-radius: 50%;
+  box-shadow: 0 0 15px #000;
+  background-image: url("images/spinner.png");
+  background-position: center;
 }
 
-#winner-container h1 {
-    margin: 0;
+#logo-container {
+  grid-column: 1/3;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#spinner {    
-    width: var(--spinner-diameter);
-    height: var(--spinner-diameter);
-    border-radius: 50%;        
-    text-align: center;
-    box-shadow: 0 0 15px #000;
-    background-image: url('images/spinner.png');
-    background-position: center;
-    background-color: black; 
-    position: relative;
-    
+#logo-container h1 {
+  margin-right: 1rem;
 }
 
-#info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    border: solid 3px #000;
-    /* height: 70vh; */
-    padding: 1rem;
-    background-color: white;
-    border-radius: 5px;
-}
-
-#info h2 {
-    margin-bottom: 1rem;
-}
-#info p {
-    margin-top: 0;
-    font-size: 1.2rem;
-}
-
-#helpful-info {
-    color: #222;
-}
 #button-container {
-    height: 3.0rem;    
+  grid-column: 1/3;
+  display: flex;
+  justify-content: center;
 }
 
 .spin-button {
-    background-color: #c42a89;
-    border: solid 3px #000;
-    border-radius: 5px;
-    color: white;
-    font-size: 1.5rem;
-    padding: .5rem;    
-    width: 100%;
-    height: 100%;
-    outline: none;
+  background-color: #c42a89;
+  border: solid 3px #000;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  width: 100%;
+  outline: none;
 }
 
-
-
 @media (max-width: 800px) {
-    #main-container {
-        display: block;
-        width: 100%;
-        margin: 0;
-    }
-    #winner-container {
-        margin: 1rem auto;        
-        
-    }
+  #main-container {
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
 
-    #button-container {
-        margin: 0 auto;    
-    }
+  #button-container {
+    margin: 0 auto;
+  }
 
-    #spinner-container {
-        height: 300px;
-        width: 300px;
-        background-image: url('images/spinner-bg-small.png');   
-        background-repeat: no-repeat;     
-        background-position: top center;
-        padding: 20px 0 0 0;
-        margin: 0 auto ;
-    }
-    #spinner {
-        background-color: transparent;
-        width: var(--spinner-diameter-small);
-        height: var(--spinner-diameter-small);
-        background-image: url('images/spinner-small.png');
-        box-shadow: none;
-        margin: 0;
-    }
-    #info {
-        display: none;
-    }
-    .spin-button {
-        display: block;
-    } 
+  #spinner-container {
+    height: 300px;
+    width: 300px;
+    background-image: url("images/spinner-bg-small.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding: 20px 0 0 0;
+    margin: 0 auto;
+  }
+  #spinner {
+    background-color: transparent;
+    width: var(--spinner-diameter-small);
+    height: var(--spinner-diameter-small);
+    background-image: url("images/spinner-small.png");
+    box-shadow: none;
+    margin: 0;
+  }
 
-    #about {
-        position: static;
-        display: block;
-        opacity: 1;
-        width: 90%;
-        margin: 0 auto;
-        box-shadow: none;
-    }
-    #about button {
-        display: none;
-    }
-    #about-show-button {
-        display: none;
-    }
+  .spin-button {
+    display: block;
+  }
+
+  #about {
+    position: static;
+    display: block;
+    opacity: 1;
+    width: 90%;
+    margin: 1rem auto;
+    box-shadow: none;
+  }
+  #about button {
+    display: none;
+  }
+  #about-show-button {
+    display: none;
+  }
 }

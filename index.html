@@ -1,59 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <title>Wheel Of Programming Languages</title>
-</head>
-<body>  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Wheel Of Programming Languages</title>
+  </head>
+  <body>
+    <div id="main-container">
+      <div id="logo-container">
+        <h1 id="logo">Wheel Of Programming!</h1>
+        <button type="button" id="about-show-button">?</button>
+      </div>
 
-  <div id="main-container">
-    <div id="logo">
-      <h1>Wheel Of Programming Languages!</h1>
-      <button type="button" id="about-show-button">?</button>
-    </div>
-    
-    <div id="button-container">
-        <button type="button" class="spin-button" id="spin-button">Spin!</button>
-    </div>
+      <div id="button-container">
+        <button type="button" class="spin-button" id="spin-button">
+          Spin!
+        </button>
+      </div>
 
-    <div id="winner-container">
-      <h1 id="winner"></h1>
-    </div>
+      <div id="spinner-container">
+        <div id="spinner"></div>
+      </div>
 
-    <div id="info">
-      <h2>Having trouble deciding which programming language you want to learn?</h2>      
+      <div id="about">
+        <h2>About</h2>
+        <p>
+          This is just a silly app written for fun. It is not meant to actually
+          decide a language for you. Each programming language has its own
+          strengths and weaknesses and you should probably just use the language
+          you enjoy most or the one that is best for the job!
+        </p>
 
-      <p id="helpful-info">
-          Just spin the wheel and it will select from some of the most popular 
-          programming languages there are!
-      </p>
-      <a target="_blank" id="language-link" href=""></a>
+        <h2>The Code</h2>
+        <p>
+          This app was created with just plain old JavaScript, html, CSS, and
+          Gimp. You can view the
+          <a target="_blank" href="https://github.com/tylerd81/wheel-spinny"
+            >code repository here</a
+          >.
+        </p>
+        <button type="button" id="about-ok-button">Ok</button>
+      </div>
     </div>
-    <div id="spinner-container">
-        <div id="spinner"></div>        
-    </div>
-
-    <div id="about">
-      <h2>About</h2>
-      <p>
-        This is just a silly app written for fun. It is not meant to actually decide a 
-        language for you. Each programming language has its own strengths and weaknesses
-        and you should probably just use the language you enjoy most or the one that is 
-        best for the job!
-      </p>
-
-      <h2>The Code</h2>
-      <p>
-        This app was created with just plain old JavaScript, html, CSS, and Gimp. You 
-        can view the <a target="_blank" href="https://github.com/tylerd81/wheel-spinny">code repository here</a>.
-      </p>
-      <button type="button" id="about-ok-button">Ok</button>
-    </div>
-  </div>
-  <script src="spinner.js"></script>
-</body>
+    <script src="spinner.js"></script>
+  </body>
 </html>
